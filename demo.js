@@ -207,21 +207,189 @@
 
 // add(8,9);
 
-function add(){
-    if(arguments.length==0){
-console.log(arguments);
-}
-else{
-    let sum=0;
-    for(let i =0;i<arguments.length;i++){
-      sum=sum+arguments[i];
-    }
-    console.log(sum);
-}
-}
-add(4,5,6)
+// function add(){
+//     if(arguments.length==0){
+// console.log(arguments);
+// }
+// else{
+//     let sum=0;
+//     for(let i = 0;i<arguments.length;i++){
+//       sum=sum+arguments[i];
+//     }
+//     console.log(sum);
+// }
+// }
+// add(4,5,6)
+
+//return function
+// function add(a,b){
+//     let d=a+b;           //multiple value [2,4,5]
+//     return d;
+// }
+// let c =add(5,6);
+// console.log(c);
+
+// function compare(a,b){
+//     if(a>b){
+//         return 1;
+//     }
+//     else if(b>a){
+//         return -1;
+//     }
+//     else{
+//         return 0 
+//     }
+// }
+// let d =compare(5,7)
+// console.log(d)
+
+//local or global variable
+
+// let a=10;  // global variable
+// function show(){
+//     let b=10;      // local variable
+//     console.log(b)
+// }
+
+// Anonymous function  jis function ka naam nhi hota hai
+
+// let show=function(){
+//     console.log("hello");
+// }
+// show();
+
+// setTimeout(function(){
+//     console.log("hello");
+// },3000);
+
+//invoved function // jao function turant banke turant assiquite ho jate hai
+//wahi banega aur assicute bhi hoga
+
+// (function(){
+//     console.log("hello");
+//     alert("hello world")
+// })();
+
+// object method
+
+// let person={
+// firstName: "azeem",
+// lastName:"aslam"
+// };
+// person.age=21;   /// one more add krna
+// delete person.lastName;    // delete krna
+// console.log(person['firstName']);
+// console.log(person);
+// console.log('height' in person);   //true or false
+// for(let vat in person){    //loop chlana
+//     console.log(vat+" :"+person[vat]);
+// }
+ 
+// let person={
+//     firstName: "azeem",
+//     lastName:"aslam",
+//     sayHello
+//    // :function//method 3
+//     (){     
+//             console.log("hello may");
+//          }
+//     };
+//     person.age=21;
+//     person.sayHello();
+//method 1
+    // person.sayHello=function(){
+    //     console.log("hello");
+    // }
+    // person.sayHello();
+
+    //method 2
+    // function greet(){
+    //     console.log("hello it");
+    // }
+    // person.sayHello=greet;
+    // person.sayHello();
+
+// use of this in object
+
+// let person={
+//     firstName:"wahid",
+//     lastName:"abdul",
+//     sayHello(){
+//         console.log( "i am "+this.firstName +" AND I HAVE A "+car.brand+ "car")
+//     }
+// };
+// let car={
+//     brand :'tata',
+//     model:'safari'
+// }
+// person.sayHello();
+
+//random number
+
+// let x =Math.floor(Math.random() * 10) + 1;
+// console.log(x);
+
+// function get(min,max){
+//     let x =Math.floor(Math.random() * (max-min +1)+min);
+//     return x;
+// }
+// console.log(get(10,20));
+
+// date management
+
+// let x= new Date(2024,11,14,10,23,33,7);
+// let x= new Date();
+// let y=x.setFullYear(2020);
+// let y =new Date();
+// y.setDate(x.getDate()+50);
+// console.log(x);
+// console.log(y);
+// if(x>y){
+// console.log("it is past date")
+// }
+// else if(y>x){
+// console.log("it is future")
+// }
+// else{
+//     console.log("it is equal")
+// }
+
+// console.log(y);
+
+// new keyword
+
+//  var person= new Object();   
+//getter setter
+
+// let person ={
+// firstName : "tech",
+// lastName:"ajit", 
+// get getname(){
+//    return this.firstName.toUpperCase();
+// },
+// set setname(n){
+//  return this.firstName=n.toUpperCase();
+// }
 
 
+// }
+// person.setname="little";
+// console.log(person);
 
+//constructor
+
+function Student(first,last,age){
+    this.firstName=first;
+    this.LastName=last;
+    this.age=age;
+
+}
+var Student1=new Student("ajit","vishwas",24);
+Student1.nationality="indian";
+Student1.name=function(){
+   return this.firstName+" "+this.LastName
+}
+console.log(Student1);
+console.log(Student1.name);
 
 
