@@ -378,18 +378,57 @@
 
 //constructor
 
-function Student(first,last,age){
-    this.firstName=first;
-    this.LastName=last;
-    this.age=age;
+// function Student(first,last,age){
+//     this.firstName=first;
+//     this.LastName=last;
+//     this.age=age;
 
-}
-var Student1=new Student("ajit","vishwas",24);
-Student1.nationality="indian";
-Student1.name=function(){
-   return this.firstName+" "+this.LastName
-}
-console.log(Student1);
-console.log(Student1.name);
+// }
+//prototype-it is use to add one or many element in constructor
+
+// Student.prototype.nationality="indian";
+// var Student1=new Student("ajit","vishwas",24);
+// Student1.nationality="indian";
+// Student1.name = function(){
+//    return this.firstName+" "+this.LastName;
+// }
+// console.log(Student1);
+// console.log(Student1.name);
+
+//api or json may use hota hai
+//its use for object to object
+//nested object
+
+// var user={
+//     id:101,
+//     email:"email@gmail.com",
+//     personalInfo:{
+//         name:"ajit",
+//         last:"yash"
+//     ,
+//     address:{
+//         street:"hdsjhbdhjbd",
+//         city:"uttar pradesh",
+//         country:"india"
+
+//     }
+// }}
+// console.log(user.personalInfo.address.country);
+
+//hoisting
+//lift or pull
+//only it can lift declaration part
+//it can study all cod then it can check wether all the declaration are call correct way 
+// ,in other case we can move to on the top of that....
 
 
+// hello(); //declaration or call
+// function hello(){
+//     console.log("hello");
+// }
+
+
+var x;
+// x=7;
+console.log(x);
+//var x;            //lift to top of declaration

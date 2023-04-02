@@ -8,7 +8,57 @@
     <script  src="demo.js"></script>
 </head>
 <body>
-    <h1 id="h">hello america</h1>
-   
+ <ul>
+    <li class="cl">list 1</li>
+     <li id="high">list 2 </li>
+    <li class="cl"> list 3</li>
+ </ul>
+ <h2>heading 1</h2>
+ 
+ <div id="tum">
+ <p class="intro">paragraph 1</p>
+ <h2>heading 2</h2>
+ <p >paragraph 2</p>
+ <h2>heading 3</h2>
+ <p class="intro">paragraph 3</p>
+</div>
+   <script>
+
+    //DOM
+
+//SELECTING BY ID
+
+let elm=document.getElementById("high");
+elm.innerHTML="<p>bread</p>"
+ console.log(elm);
+
+ //SELECTING BY CLASSNAME
+
+  let eml=document.getElementsByClassName("cl")
+  for(let i =0;i<eml.length;i++){
+eml[i].innerHTML="<p>egg</p>"
+  }
+
+  //SELECTING BY TAGNAME
+
+let mrf=document.getElementById("tum")
+let mtt=mrf.getElementsByTagName("h2");
+for(let i =0;i<mtt.length;i++){
+    mtt[i].innerHTML="change";
+}
+
+//QUERY SELECTOR
+
+let pgl=document.querySelectorAll("p.intro");
+console.log(pgl)
+for(let i = 0; i< pgl.length ; i++){
+    pgl[i].innerHTML="new one";
+}
+
+
+
+
+
+   </script>
 </body>
 </html>
