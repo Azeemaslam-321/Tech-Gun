@@ -428,7 +428,10 @@
 // }
 
 
-var x;
+//var x;  //  it can initialize automatically undefined. 
 // x=7;
-console.log(x);
+// console.log(x);
 //var x;            //lift to top of declaration
+
+// use strict mode that can tell which type of error occured.
+

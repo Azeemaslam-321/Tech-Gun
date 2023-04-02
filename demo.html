@@ -8,12 +8,12 @@
     <script  src="demo.js"></script>
 </head>
 <body>
- <ul>
+ <!-- <ul>
     <li class="cl">list 1</li>
      <li id="high">list 2 </li>
     <li class="cl"> list 3</li>
- </ul>
- <h2>heading 1</h2>
+ </ul> -->
+ <!-- <h2>heading 1</h2>
  
  <div id="tum">
  <p class="intro">paragraph 1</p>
@@ -21,44 +21,101 @@
  <p >paragraph 2</p>
  <h2>heading 3</h2>
  <p class="intro">paragraph 3</p>
-</div>
+</div> -->
+<!-- <ul >
+    <li >list 1</li>
+    <li id="intro1">list 2</li>
+    <li>list 3</li>
+</ul>
+<ul>
+    <li>list a</li>
+    <li>list b</li>
+    <li>list c</li>
+</ul>
+<div id="intro">
+<p>
+this is my tag
+</p>
+</div> -->
+<ul id="intro">
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+    <li>list 4</li>
+    <li>list 5</li>
+</ul>
+
+
    <script>
 
     //DOM
 
 //SELECTING BY ID
 
-let elm=document.getElementById("high");
-elm.innerHTML="<p>bread</p>"
- console.log(elm);
+// let elm=document.getElementById("high");
+// elm.innerHTML="<p>bread</p>"
+//  console.log(elm);
 
  //SELECTING BY CLASSNAME
 
-  let eml=document.getElementsByClassName("cl")
-  for(let i =0;i<eml.length;i++){
-eml[i].innerHTML="<p>egg</p>"
-  }
+//   let eml=document.getElementsByClassName("cl")
+//   for(let i =0;i<eml.length;i++){
+// eml[i].innerHTML="<p>egg</p>"
+//   }
 
   //SELECTING BY TAGNAME
 
-let mrf=document.getElementById("tum")
-let mtt=mrf.getElementsByTagName("h2");
-for(let i =0;i<mtt.length;i++){
-    mtt[i].innerHTML="change";
-}
+// let mrf=document.getElementById("tum")
+// let mtt=mrf.getElementsByTagName("h2");
+// for(let i =0;i<mtt.length;i++){
+//     mtt[i].innerHTML="change";
+// }
 
 //QUERY SELECTOR
 
-let pgl=document.querySelectorAll("p.intro");
-console.log(pgl)
-for(let i = 0; i< pgl.length ; i++){
-    pgl[i].innerHTML="new one";
-}
+// let pgl=document.querySelectorAll("p.intro");
+// console.log(pgl)
+// for(let i = 0; i< pgl.length ; i++){
+//     pgl[i].innerHTML="new one";
+// }
+//Traversing element
 
+// let pya=document.getElementById("intro1")
+// let prt= pya.parentElement;
+// let node=pya.firstElementChild;
+// let node=pya.lastElementChild;
+// let node=pya.children;
+// let node=pya.previousElementSibling;
+// let node=pya.nextElementSibling;
+// console.log(node);
 
+//append and create
 
+// let ekt=document.getElementById("intro")
+// let h1=document.createElement('h1')
+// h1.className="try";
+// let text=document.createTextNode("this is second tag");
+// h1.appendChild(text);
+// ekt.appendChild(h1);
+// h1.textContent="content added";
+// document.body.appendChild(h1);
 
+//insertbefore
 
+// let list1=document.getElementById("intro");
+
+// let item=document.createElement("li");
+// item.textContent="new list 5";
+
+// let pos = list1.firstElementChild.nextElementSibling;
+// list1.insertBefore(item,pos);
+
+let parent =document.body;
+let ett=document.createElement("h1");
+ett.textContent="new one";
+
+let list = document.getElementById("intro")
+   parent.insertBefore(ett,list);
    </script>
 </body>
 </html>
