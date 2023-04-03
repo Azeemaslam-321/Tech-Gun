@@ -37,14 +37,25 @@
 this is my tag
 </p>
 </div> -->
-<ul id="intro">
+<!-- <ul id="intro">
     <li>list 1</li>
     <li>list 2</li>
     <li>list 3</li>
     <li>list 4</li>
     <li>list 5</li>
-</ul>
+</ul> -->
+<!-- <ul id="menu">
+<li>home</li>
+<li>product</li>
+<li>About us</li>
 
+</ul> -->
+<div id="intro">
+    <h2>
+        heading
+    </h2>
+    <p>this is a tag</p>
+</div>
 
    <script>
 
@@ -110,12 +121,37 @@ this is my tag
 // let pos = list1.firstElementChild.nextElementSibling;
 // list1.insertBefore(item,pos);
 
-let parent =document.body;
-let ett=document.createElement("h1");
-ett.textContent="new one";
+// let parent =document.body;
+// let ett=document.createElement("h1");
+// ett.textContent="new one";
 
-let list = document.getElementById("intro")
-   parent.insertBefore(ett,list);
+// let list = document.getElementById("intro")
+//    parent.insertBefore(ett,list);
+
+//remove chid element
+let parent =document.getElementById("menu");
+// let eln= parent.firstElementChild.nextElementSibling;
+// parent.removeChild(eln);
+// document.body.removeChild(eln);
+
+//clone and replace
+
+// let clane=parent.cloneNode(true);
+// clane.id="mobile";
+// document.body.appendChild(clane);   
+
+//replace
+
+// let item = document.createElement("li")
+// item.textContent = "Servics";
+// let replace=parent.firstElementChild.nextElementSibling;
+// parent.replaceChild(item,replace);
+
+//insert adjacent
+let ett=document.getElementById("intro")
+let html="<h1> new head</h1>";
+ett.insertAdjacentHTML('beforebegin',html);  //afterend //aferbegin // beforebegin //beforeend
+
    </script>
 </body>
 </html>
