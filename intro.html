@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Part 2nd</title>
+        <script src="intro.js"></script>
+        <!-- external css -->
+        <style>                                
+           
+        /* #btn{
+            background-color:blueviolet;
+            color:chartreuse;
+        } */
+        .color{
+            background-color: grey;
+         color:red;
+           }
+           .dim{
+            padding:100px;     
+         border:1px solid black
+;
+           }
+           #box{
+            height:100px;
+            width:100px;
+            background-color: blueviolet;
+           }
+           /* body{
+            height:2000px
+           } */
+           /* body{
+            padding:100px;
+            background-color: cornsilk;
+           }
+           #mydiv{
+            padding: 50px;
+            background-color: darkblue;
+           } */
+    </style>
+    </head>
+    <body>
+<!-- <div id="mydiv">
+    <button id="btn">click me</button>
+</div> -->
+<!-- <a href="https://
+www.google.com" id="anchor">click me</a> -->
+
+            <!-- //using inline css -->
+        <!-- <button id="btn" class="form1"  >send</button>  -->
+        <!-- <div id="box" class="color dim"> 
+this is my dummy style
+        </div> -->
+         <!-- <button id="btn">click me ! </button> -->
+<!-- <div id="box" onclick="fun()"></div> -->
+<!-- <div id="box" ></div> -->
+<!-- <h1>hello</h1> -->
+<!-- <form >
+    <input type="text" id="myInput">
+</form> -->
+<!-- <button id="btn1">google</button>
+<button id="btn2">yahoo me!</button>
+<button id="btn3">close!</button> -->
+<!-- <button id="btn1">clear interval</button> -->
+
+    </body>
+    <script>
+    // let vat=document.getElementById("btn");
+    // vat.setAttribute("class","form1");
+//    let cat= vat.getAttribute("class");
+// let cat= vat.removeAttribute("class");
+// let cat=vat.hasAttribute("name");      //check true or false
+//    console.log(cat);
+
+//inline style
+
+// vat.style.color="pink";                 //using only name
+// vat.setAttribute("style","background-color:red;color:white; ") //2nd method to style your css
+// vat.style.cssText   += "boder:2px solid black;background-color:blue;"
+
+//get computed style
+
+// let hat=getComputedStyle(vat);
+// console.log(hat.color)
+
+//css classes
+// let box=document.getElementById("box")
+// console.log(box.classList);
+// box.classList.add("dim");
+// box.classList.remove("dim");
+// box.classList.replace("color","dim");
+// let result=box.classList.contains("color");
+// box.classList.toggle("dim");
+// console.log(result);
+
+
+// for(let css of box.classList){
+//     console.log(css)
+// }
+
+//width and height of the element
+
+// let width=box.offsetWidth;
+// let height=box.offsetHeight;
+// let width = box.clientWidth;   //ignore border
+// let height = box.clientHeight; //ignore border
+// console.log(width);
+// console.log(height);
+
+//Dom
+
+// function rate(){
+//     alert("button was clicked")
+// }
+
+//event function
+
+// let btn = document.getElementById("btn")
+// btn.addEventListener('click',function(){
+//     console.log("btn was clicked");
+// });
+// btn.addEventListener('mouseover',function(){
+//     console.log("mouse over is activated");
+// });
+// btn.addEventListener('mouseout',function(){
+//     console.log("mouse out is activated");
+// });
+// function click1(){
+//     console.log("click1 activated");
+// }
+// function click2(){
+// console.log("click2 activated")
+// }
+// btn.addEventListener('click',click1);
+// btn.addEventListener('click',click2);
+
+// btn.removeEventListener('click',click2)
+
+//page load event  without css or html download using pade 
+//with download of css and html is called as load      using window-its is known as screen
+
+// function fun(){
+//     console.log("click");
+// }
+
+//keyup and keydown
+//you can click any key
+
+// window.addEventListener('keyup',check);      //keydown
+
+// function check(event){
+//     console.log(event.key);
+// }
+
+
+//scrolling
+
+// window.addEventListener('scroll',function(){
+//     console.log("scrolling.....")
+// })
+// window.addEventListener('wheel',function(event){
+//     if(event.deltaY < 0){
+//         console.log("scrolling up...")
+//     }
+//     else if(event.deltaY > 0){
+//         console.log("scrolling down...")
+//     }
+// });
+// window.addEventListener('scroll',function(){
+//     if(window.pageYOffset > 150){
+//     document.body.style.background="red";
+//     }
+//     else {
+//        document.body.style.background="white";
+//     }
+// });
+
+//form
+
+// let x = document.getElementById("myInput")
+// x.addEventListener('focus',focused)
+// x.addEventListener('blur',checkblur)
+
+// function focused(){
+//     x.style.background="yellow";
+// }
+// function checkblur(){
+//     x.style.background="white";
+// }
+
+// x.addEventListener('change',function(){
+//     console.log(this.value);
+// })
+// let d= document.getElementById("mydiv")
+// let b=document.getElementById("btn")
+
+// b.addEventListener('click',btnclicked);
+// d.addEventListener('click',divclick)
+// document.body.addEventListener('click',bodyclick)
+
+// function btnclicked(event){
+//     console.log("btn clicked ..")
+//     event.stopPropagation();
+// }
+// function divclick(){
+//     console.log("div clicked ..")
+//     event.stopPropagation();
+// }
+
+// function bodyclick(){
+//     console.log("body clicked ..")
+//     event.stopPropagation();
+// }
+// let x=document.getElementById("anchor");
+// x.addEventListener('click',function(e){
+//     console.log("clicked was");
+//     e.preventDefault();
+// })
+// let btn1=document.getElementById("btn1")
+// let btn2=document.getElementById("btn2")
+// let btn3=document.getElementById("btn3")
+// let url= " https://www.google.com ";
+// let feature="height=500,width=500";
+// let win;
+// btn1.addEventListener('click',function(){
+//   win=  window.open(url,'google',feature)
+// });
+// btn2.addEventListener('click',function(){
+//     window.open('https://www.yahoo.com' , 'google');
+// });
+// btn3.addEventListener('click',function(){
+//     win.close();
+// })
+
+//timeout adn time interval
+// setTimeout(myfunction,3000);
+// function myfunction(){
+// alert("please subscribe")
+// }
+
+//interval
+
+// var t1=setInterval(fun,2000);
+
+// function fun(){
+//     console.log("please subscribe");
+// }
+// let btn1=document.getElementById("btn1")
+// btn1.addEventListener('click',function(){
+//     clearInterval(t1);
+// })
+// console.log(location.href);
+// console.log(window.location);
+
+// console.log(window.assign);
+
+// console.log(location.replace);
+
+//navigator
+
+console.log(navigator.appName);
+console.log(navigator.appVersion);
+console.log(navigator.cookieEnabled);
+console.log(navigator.platform);
+console.log(navigator.userAgent);
+console.log(navigator.javaEnabled());
+console.log(screen.width);
+console.log(screen.colorDepth);
+
+
+
+</script>
+</html>
